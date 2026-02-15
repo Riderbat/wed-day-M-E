@@ -32,7 +32,7 @@ const trixiepro = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Егор и Мария • 20 июня 2026',
+  title: 'Е и М • 20.06.26',
   description: 'Приглашение на свадьбу Егора и Марии',
   keywords: 'свадьба, приглашение, Егор, Мария, 2026',
   openGraph: {
