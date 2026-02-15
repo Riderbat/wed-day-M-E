@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* 
+Цветовая палитра
+#e46029
+#263d63
+#c1c8d8
+#eeae4f 
+*/
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -115,6 +123,38 @@ html {
 
 .animate-fade-in {
   animation: fade-in 0.8s ease-out;
+}
+
+/* Цветок: появление при загрузке */
+@keyframes flower-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-flower-appear {
+  animation: flower-appear 0.9s ease-out forwards;
+}
+
+/* Эмодзи не должны быть курсивом */
+.emoji {
+  font-style: normal;
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+
+/* Цветок: исчезновение по клику (крутится, уменьшается) — плавно и постепенно */
+.flower-exit {
+  transition: transform 2.5s ease-in-out, opacity 2.5s ease-in-out;
+}
+
+.flower-exit-active {
+  transform: rotate(720deg) scale(0);
+  opacity: 0;
 }
 
 /* Typography improvements */
